@@ -1,0 +1,393 @@
+@import url("./reset.css");
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /*cores*/
+    --branco: #FFFFFF;
+    --azul: #228EB6;
+    --cinza: #2E2D36;
+    --amarelo: #FFC756;
+    --borda-botao: #E9E9E9;
+
+    /*fontes*/
+    --fonte-cabecalho: 'Inter', sans-serif;
+    --fonte-menu-lateral: 'Inter', sans-serif;
+    --fonte-corpo-principal: 'Inter', sans-serif;
+    --fonte-rodape: 'Inter', sans-serif;
+
+    /*tamanhos*/
+    --tamanho-8px: 8px;
+    --tamanho-10px: 10px;
+    --tamanho-12px: 12px;
+    --tamanho-14px: 14px;
+    --tamanho-30px: 30px;
+    --tamanho-32px: 32px;
+}
+
+body {
+    height: 100vh;
+    font-size: 16px;
+}
+
+.cabecalho {
+    text-transform: uppercase;
+    font-family: var(--fonte-cabecalho);
+    background-color: var(--branco);
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.principal {
+    font-family: var(--fonte-corpo-principal);
+    margin-left: 6px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.rodape {
+    font-family: var(--fonte-rodape);
+}
+
+img {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+img:hover {
+    opacity: 0.7;
+}
+
+.cabecalho__conteudo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.cabecalho__conteudo__logo{
+    background-image: url("../img/Logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 100px;
+    width: 100%;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.cabecalho__conteudo__dark {
+    background-image: url("../img/Dark_mode.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 100px;
+    width: 100%;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.cabecalho__conteudo__notificacao {
+    background-image: url("../img/Notification.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 100px;
+    width: 100%;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.cabecalho__conteudo__usuario {
+    background-image: url("../img/Usuario.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 100px;
+    width: 100%;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.menu__lateral__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 35vw;
+}
+
+.menu__lateral {
+    margin-bottom: 15px;
+}
+
+.menu__lateral__titulo {
+    font-family: var(--fonte-menu-lateral);
+    font-size: var(--tamanho-14px);
+    color: var(--cinza);
+    font-weight: 700;
+}
+
+.menu__lateral__traco {
+    object-fit: none;
+}
+
+.menu__lateral__item,
+.menu__lateral__item__quantidade {
+    font-family: var(--fonte-menu-lateral);
+    font-size: var(--tamanho-12px);
+    color: var(--cinza);
+    font-weight: 400;
+    margin-left: 6px;
+    padding: 10px;
+}
+
+.container__principal {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.container__principal__itens {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    align-content: center;  
+}
+
+.container__principal__titulo {
+    font-family: var(--fonte-menu-lateral);
+    font-size: var(--tamanho-30px);
+    color: var(--cinza);
+    font-weight: 700;
+}
+
+.container__principal__descricao__tarefa {
+    text-align: center;
+    font-size: var(--tamanho-12px);
+    color: var(--cinza);
+}
+
+.container__principal__itens button {
+    border-color: var(--borda-botao);
+    background-color: var(--branco);
+    color: var(--cinza);
+    font-size: var(--tamanho-12px);
+    outline: none;
+    border-radius: 4px;
+    border: solid 1px;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.container__principal__itens button:hover,
+input[type="checkbox"]:hover {
+    background-color: var(--amarelo);
+    accent-color: var(--amarelo);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.rodape__logo {
+    width: 40px;
+    height: 35px;
+    padding: 5px;
+}
+
+.rodape__lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5px;
+    padding: 5px;
+    align-content: top;
+    align-items: left;
+}
+
+.rodape__titulo {
+    font-family: var(--fonte-menu-lateral);
+    font-size: var(--tamanho-10px);
+    color: var(--cinza);
+    font-weight: 700;
+}
+
+.rodape__descricao {
+    font-family: var(--fonte-menu-lateral);
+    font-size: var(--tamanho-8px);
+    color: var(--cinza);
+    font-weight: 400;
+}
+
+.rodape__siga-nos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: auto;
+}
+
+.rodape_siga-nos__logo {
+    width: 16px;
+    height: 16px;
+}
+
+.rodape__copyright {
+    font-family: var(--fonte-menu-lateral);
+    font-size: var(--tamanho-8px);
+    color: var(--cinza);
+    font-weight: 400;
+}
+
+@media(min-width: 720px) {
+
+    .cabecalho {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px;
+        width: 100%;
+        height: auto;
+    }
+
+    .cabecalho__conteudo {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 5px;
+        width: 100%;
+        height: auto;
+    }
+
+    .cabecalho__conteudo__logo{
+        width: 100%;
+        height: auto;
+        align-items: center;
+        align-self: center;
+        align-content: center;
+        padding: 5px;
+        gap: 10px;
+}
+    
+    .cabecalho__conteudo2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 5px;
+        width: 100%;
+        height: auto;
+    }
+
+    .cabecalho__conteudo__dark,
+    .cabecalho__conteudo__notificacao,
+    .cabecalho__conteudo__usuario {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu__lateral__div {
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+        gap: auto;
+        width: auto;
+        height: auto;
+    }
+
+    .menu__lateral {
+        padding: 0;
+    }
+
+    .menu__lateral li {
+        padding: 10px;
+    }
+
+    .menu__lateral__titulo {
+        font-size: var(--tamanho-14px);
+        color: var(--cinza);
+        font-weight: 700;
+    }
+
+    .menu__lateral__item,
+    .menu__lateral__item__quantidade {
+        font-size: var(--tamanho-12px);
+        color: var(--cinza);
+        font-weight: 400;
+    }
+
+    .container__principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: auto;
+        padding: 6px;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .container__principal__titulo {
+        font-size: var(--tamanho-32px);
+        color: var(--cinza);
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .container__principal__itens {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        padding: 4px;
+        margin: 0;
+        gap: 12px;
+    }
+
+    .container__principal__checkbox {
+        width: 20px;
+        height: 20px;
+        border-color: var(--borda-botao);
+        background-color: var(--branco);
+        color: var(--cinza);
+        outline: none;
+        border-radius: 4px;
+        border: solid 1px;
+        margin: 0;
+    }
+
+    .container__principal__descricao__tarefa {
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        font-size: var(--tamanho-14px);
+        font-weight: 400;
+        color: var(--cinza);
+    }
+
+    .container__principal__itens button {
+        border-color: var(--borda-botao);
+        background-color: var(--branco);
+        color: var(--cinza);
+        font-size: var(--tamanho-12px);
+        outline: none;
+        border-radius: 4px;
+        border: solid 1px;
+        text-align: center;
+        padding: 12px;
+        cursor: pointer;
+        transition: .5s;
+    }
+}
